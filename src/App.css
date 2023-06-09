@@ -93,6 +93,7 @@ h6 {
   color: var(--text-color);
   background-image: url(/public/pexels-stein-egil-liland-1933316.jpg);
   background-size: cover;
+  background-position: center;
 }
 
 
