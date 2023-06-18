@@ -1,0 +1,88 @@
+@import url(../src/styles/reset.css);
+@import url(../src/styles/fonts.css);
+@import url(../src/styles/nav.css);
+@import url(../src/styles/home.css);
+
+
+:root {
+  /* --text-color: #fff; */
+  --primary-color: #9fe391;
+  --accent-color: #551a8b;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  gap: 1rem;
+  color: var(--text-color);
+  background-size: cover;
+  background-position: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.requests {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  font-family: 'space-grotesk';
+  padding: 1rem;
+  backdrop-filter: blur(20px);
+  border-radius: 1rem;
+  outline: white 1px solid;
+
+}
+
+label {
+  transform: translateY(10%);
+  transition: transform .3s ease-in-out;
+}
+
+.submit {
+  padding-block: 1rem;
+  background-color: var(--primary-color);
+  border: none;
+  transition: .5s ease;
+  border-radius: 50rem;
+}
+
+.submit:hover {
+  transform: translateY(-5%);
+  box-shadow: 1px 1px 20px 0px hsl(141, 73%, 42%, 0.3);
+}
+
+input {
+  background: transparent;
+  height: 40px;
+  border: none;
+  border-bottom: solid var(--text-color) 1px;
+}
+
+
+input:focus-visible {
+  outline-color: var(--accent-color);
+
+}
+
+.form-group:has(input:focus)>label {
+  transform: none;
+}
